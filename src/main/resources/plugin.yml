@@ -1,0 +1,8 @@
+name: Flachwitze
+main: de.slevermann.minecraft.flachwitze.FlachwitzPlugin
+version: 1.0-SNAPSHOT
+
+commands:
+  flachwitz:
+    description: Flachwitz für alle vom Server
+    usage: /flachwitz
