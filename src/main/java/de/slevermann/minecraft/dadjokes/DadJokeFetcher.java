@@ -35,7 +35,10 @@ public class DadJokeFetcher {
                 baos.write(buffer, 0, length);
             }
 
-            Bukkit.broadcastMessage(baos.toString());
+            String dadJoke = baos.toString();
+            for (String line : dadJoke.split("\\r?\\n")) {
+                Bukkit.broadcastMessage(line);
+            }
         } finally {
             if (connection != null) {
                 connection.disconnect();
