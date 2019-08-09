@@ -1,8 +1,10 @@
-name: Flachwitze
-main: de.slevermann.minecraft.flachwitze.FlachwitzPlugin
+name: DadJokes
+main: de.slevermann.minecraft.dadjokes.DadJokePlugin
 version: 1.0-SNAPSHOT
 
 commands:
-  flachwitz:
-    description: Flachwitz für alle vom Server
-    usage: /flachwitz
+  dadjoke:
+    description: Dad joke for everyone on the server
+    usage: /dadjoke
+    aliases:
+      - flachwitz

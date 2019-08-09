@@ -1,4 +1,4 @@
-package de.slevermann.minecraft.flachwitze;
+package de.slevermann.minecraft.dadjokes;
 
 import org.bukkit.Bukkit;
 
@@ -8,15 +8,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-public class FlachwitzFetcher {
-    private static final String FLACHWITZ_URL = "https://api.opossum.media/streamacademy/commands/fun/flachwitz.php";
+public class DadJokeFetcher {
+    private static final String DAD_JOKE_URL = "https://icanhazdadjoke.com/";
 
     public void getFlachwitz() throws IOException {
         HttpsURLConnection connection = null;
         try {
-            connection = (HttpsURLConnection) new URL(FLACHWITZ_URL).openConnection();
+            connection = (HttpsURLConnection) new URL(DAD_JOKE_URL).openConnection();
 
             connection.setRequestMethod("GET");
+            connection.addRequestProperty("Accept", "text/plain");
+            connection.addRequestProperty("User-Agent", "Spigot Dad Joke Plugin " +
+                    "(https://github.com/sonOfRa/spigot-dadjokes");
             connection.connect();
 
             if (connection.getResponseCode() != 200) {

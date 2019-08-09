@@ -1,4 +1,4 @@
-package de.slevermann.minecraft.flachwitze;
+package de.slevermann.minecraft.dadjokes;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -9,20 +9,20 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.logging.Level;
 
-public class FlachwitzPlugin extends JavaPlugin {
+public class DadJokePlugin extends JavaPlugin {
     private static final int TICKS_PER_SECOND = 20;
 
     private BukkitTask task;
 
     @Override
     public void onEnable() {
-        getLogger().info("Flachwitze loaded");
-        this.getCommand("flachwitz").setExecutor(new FlachwitzCommand());
+        getLogger().info("Dad jokes loaded");
+        this.getCommand("dadjoke").setExecutor(new DadJokeCommand());
         this.task = new BukkitRunnable() {
             @Override
             public void run() {
                 try {
-                    new FlachwitzFetcher().getFlachwitz();
+                    new DadJokeFetcher().getFlachwitz();
 
                 } catch (MalformedURLException ex) {
                     Bukkit.getLogger().log(Level.WARNING, "Malformed URL. This is a bug in the plugin.");
@@ -36,6 +36,6 @@ public class FlachwitzPlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         this.task.cancel();
-        getLogger().info("Flachwitze unloaded");
+        getLogger().info("Dad jokes unloaded");
     }
 }

@@ -1,4 +1,4 @@
-package de.slevermann.minecraft.flachwitze;
+package de.slevermann.minecraft.dadjokes;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -9,17 +9,17 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.util.logging.Level;
 
-public class FlachwitzCommand implements CommandExecutor {
+public class DadJokeCommand implements CommandExecutor {
 
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         try {
-            new FlachwitzFetcher().getFlachwitz();
+            new DadJokeFetcher().getFlachwitz();
         } catch (MalformedURLException ex) {
             Bukkit.getLogger().log(Level.WARNING, "Malformed URL. This is a bug in the plugin.");
-            commandSender.sendMessage("Plugin ist karp0tt!");
+            commandSender.sendMessage("Malformed URL. This is a bug in the plugin.");
         } catch (IOException ex) {
             Bukkit.getLogger().log(Level.INFO, "Could not fetch joke from URL");
-            commandSender.sendMessage("Flachwitz-URL ist tot");
+            commandSender.sendMessage("Dad joke URL is down");
         }
         return true;
     }
