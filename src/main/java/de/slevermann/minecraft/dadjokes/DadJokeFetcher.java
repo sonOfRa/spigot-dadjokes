@@ -36,7 +36,7 @@ public class DadJokeFetcher {
             }
 
             String dadJoke = baos.toString();
-            for (String line : dadJoke.split("\\r?\\n")) {
+            for (String line : dadJoke.split("\\R")) {
                 Bukkit.broadcastMessage(line);
             }
         } finally {
