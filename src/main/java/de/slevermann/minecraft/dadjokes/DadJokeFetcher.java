@@ -11,7 +11,7 @@ import java.net.URL;
 public class DadJokeFetcher {
     private static final String DAD_JOKE_URL = "https://icanhazdadjoke.com/";
 
-    public void getFlachwitz() throws IOException {
+    public void getDadJoke() throws IOException {
         HttpsURLConnection connection = null;
         try {
             connection = (HttpsURLConnection) new URL(DAD_JOKE_URL).openConnection();

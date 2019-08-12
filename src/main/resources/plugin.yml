@@ -1,6 +1,6 @@
 name: DadJokes
 main: de.slevermann.minecraft.dadjokes.DadJokePlugin
-version: 1.0-SNAPSHOT
+version: 1.0.0
 
 commands:
   dadjoke:

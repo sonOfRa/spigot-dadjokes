@@ -16,13 +16,12 @@ public class DadJokePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().info("Dad jokes loaded");
         this.getCommand("dadjoke").setExecutor(new DadJokeCommand());
         this.task = new BukkitRunnable() {
             @Override
             public void run() {
                 try {
-                    new DadJokeFetcher().getFlachwitz();
+                    new DadJokeFetcher().getDadJoke();
 
                 } catch (MalformedURLException ex) {
                     Bukkit.getLogger().log(Level.WARNING, "Malformed URL. This is a bug in the plugin.");
@@ -36,6 +35,5 @@ public class DadJokePlugin extends JavaPlugin {
     @Override
     public void onDisable() {
         this.task.cancel();
-        getLogger().info("Dad jokes unloaded");
     }
 }

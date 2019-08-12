@@ -13,7 +13,7 @@ public class DadJokeCommand implements CommandExecutor {
 
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         try {
-            new DadJokeFetcher().getFlachwitz();
+            new DadJokeFetcher().getDadJoke();
         } catch (MalformedURLException ex) {
             Bukkit.getLogger().log(Level.WARNING, "Malformed URL. This is a bug in the plugin.");
             commandSender.sendMessage("Malformed URL. This is a bug in the plugin.");
