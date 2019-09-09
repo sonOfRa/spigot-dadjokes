@@ -1,10 +1,10 @@
 name: DadJokes
 main: de.slevermann.minecraft.dadjokes.DadJokePlugin
-version: 1.0.0
+version: 1.1.0
 
 commands:
   dadjoke:
     description: Dad joke for everyone on the server
-    usage: /dadjoke
+    usage: /<command>
     aliases:
       - flachwitz
