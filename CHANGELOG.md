@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.2] 2021-07-31
+
+### Changed
+- Upgrade to Minecraft 1.17.1
+
 ## [1.2.1] 2020-08-30
 
 ### Changed
