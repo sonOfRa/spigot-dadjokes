@@ -6,7 +6,7 @@
 
     <groupId>de.slevermann.minecraft</groupId>
     <artifactId>dadjokes</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.3</version>
 
 
     <repositories>
@@ -18,14 +18,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>16</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.17.1-R0.1-SNAPSHOT</version>
+            <version>1.18.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
